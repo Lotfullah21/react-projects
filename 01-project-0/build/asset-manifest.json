@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.525f039d.css",
+    "main.js": "/static/js/main.45d50470.js",
+    "static/media/Machine-Learning-cover.png": "/static/media/Machine-Learning-cover.d56c68841e175e55e0cd.png",
+    "static/media/school-kid-1.jpg": "/static/media/school-kid-1.3dbde9811d3b0d7378ce.jpg",
+    "static/media/wev-development.jpg": "/static/media/wev-development.7a2c82126b076cfaa09e.jpg",
+    "static/media/light-1.jpg": "/static/media/light-1.a8477fff794200e23827.jpg",
+    "static/media/deep-learning-cover-primary.webp": "/static/media/deep-learning-cover-primary.75fd22a9a30266085e96.webp",
+    "index.html": "/index.html",
+    "main.525f039d.css.map": "/static/css/main.525f039d.css.map",
+    "main.45d50470.js.map": "/static/js/main.45d50470.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.525f039d.css",
+    "static/js/main.45d50470.js"
+  ]
+}
