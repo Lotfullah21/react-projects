@@ -68,3 +68,23 @@ header h5 {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 0.8px;
 }
+
+.btn-read {
+  background: transparent;
+  margin-left: 0.1rem;
+  padding: 0.2rem 0.3rem;
+  cursor: pointer;
+  color: rgb(3, 78, 218);
+  border: transparent;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.additionalQuestion {
+  font-size: 1rem;
+  font-weight: 2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+}

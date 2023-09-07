@@ -1,6 +1,7 @@
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useState } from "react";
 const Question = ({ id, question, answer, activeQuestion, toggleQuestion }) => {
+  const [readMore, setReadMore] = useState(false);
   const isActiveQuestion = id === activeQuestion;
   return (
     <article className="question">
@@ -14,8 +15,19 @@ const Question = ({ id, question, answer, activeQuestion, toggleQuestion }) => {
             <AiOutlinePlus className="plus"></AiOutlinePlus>
           )}
         </button>
-      </header>
-      <p className="answer">{isActiveQuestion && answer}</p>
+      </header>{" "}
+      <p className="answer">
+        {isActiveQuestion
+          ? readMore
+            ? answer
+            : `${answer.substring(0, 400)} ...`
+          : ""}
+        {isActiveQuestion && (
+          <button className="btn-read" onClick={() => setReadMore(!readMore)}>
+            {readMore ? "show less" : "read more"}
+          </button>
+        )}
+      </p>
     </article>
   );
 };
