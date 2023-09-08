@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 2rem auto;
+  max-width: 1192px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.btn-course {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  font-size: 0.879rem;
+  transition: 0.3s all ease-out;
+  font-weight: 600;
+  color: rgb(4, 59, 4);
+  line-height: 1.4;
+  background: rgb(237, 235, 235);
+  padding: 0.1rem 0.3rem;
+}
+
+.btn-course:hover {
+  color: rgb(6, 197, 6);
+  box-shadow: 0 1px rgb(4, 225, 4);
+}
+
+.btn-active {
+  color: rgb(6, 197, 6);
+  box-shadow: 0 1.4px rgb(4, 225, 4);
+  color: rgb(6, 197, 6);
+  box-shadow: 0 1.4px rgb(4, 225, 4);
+}
+
+.course-name {
+  text-transform: capitalize;
+  color: rgb(5, 161, 39);
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 1px;
+  margin: 0.5rem 0;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.title {
+  text-transform: capitalize;
+  color: rgb(51, 50, 69);
+  display: block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 1px;
+  margin: 0.2rem 0;
+}
+
+.duration {
+  padding: 0.35rem 0.6rem;
+  color: rgb(32, 66, 57);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.features,
+.goals {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.4rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.goal-icon {
+  color: rgba(207, 23, 23, 0.776);
+}
+.goals p {
+  color: rgb(75, 55, 55);
+}
+
+.feature-icon {
+  color: rgb(2, 110, 58);
+}
+.features p {
+  color: rgb(75, 55, 55);
+}
+
+.headline {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-left: 2.3rem;
+  color: rgb(6, 12, 182);
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 3rem;
+  }
+  .btn-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .btn-course {
+    margin-bottom: 1rem;
+    background: transparent;
+    transition: 0.1s all ease-out;
+  }
+  .btn-course:hover {
+    color: rgb(6, 197, 6);
+    box-shadow: -1px 0px rgb(4, 225, 4);
+  }
+
+  .btn-active {
+    color: rgb(6, 197, 6);
+    box-shadow: -2px 0px rgb(4, 225, 4);
+  }
+}
