@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-container {
+  display: grid;
+  padding: 1.4rem;
+  row-gap: 1.5rem;
+  height: 130px;
+}
+
+.color-form {
+  display: flex;
+}
+
+input[type="text"] {
+  padding: 0.3rem 0.31rem;
+  font-size: 1rem;
+  outline: none;
+  border-color: grey;
+  max-width: 180px;
+}
+
+input[type="color"] {
+  border: none;
+  background: white;
+  height: 100%;
+}
+
+.btn {
+  letter-spacing: 1px;
+  padding: 0.2rem 0.3rem;
+  text-transform: capitalize;
+  color: white;
+  border: none;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+@media screen and (min-width) {
+  .form-container {
+    grid-template-columns: auto 1fr;
+    column-gap: 1.8rem;
+    align-items: center;
+  }
+}
+
+.colors-container {
+  min-height: calc(100vh - 130px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+.colors-container {
+  min-height: calc(100vh - 130px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+.color-container {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.color-container p {
+  line-height: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.color-light {
+  color: white;
+}
