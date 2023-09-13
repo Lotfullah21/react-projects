@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-clr: rgb(255, 255, 255);
+  --color: rgb(0, 0, 0);
+  --dark-background: black;
+  --dark-color: rgb(255, 255, 255);
+  --darkModeTransition: color 0.9s ease-in-out, background-color 1s ease-in-out;
+  --max-width: 1192px;
+  --fixed-width: 768px;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background-clr: var(--dark-background);
+    --color: var(--dark-color);
+  }
+} */
+body {
+  color: var(--color);
+  background: var(--background-clr);
+  transition: var(--darkModeTransition);
+}
+
+.dark-theme {
+  --background-clr: var(--dark-background);
+  --color: var(--dark-color);
+  --background-clr: var(--dark-background);
+  --color: var(--dark-color);
+}
+
+.toggle-container {
+  width: 90vw;
+  max-width: var(--max-width);
+  padding: 0.9rem 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggle-btn {
+  background: transparent;
+  border-color: transparent;
+  width: 4rem;
+  height: 1rem;
+  display: grid;
+  cursor: pointer;
+  place-items: center;
+}
+
+.toggle-icon {
+  color: var(--color);
+  font-size: 1.5rem;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  color: rgb(3, 222, 3);
+  letter-spacing: 1.1px;
+}
+
+.form-container {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--background-clr);
+  border: 1px solid rgb(174, 174, 174);
+  outline: none;
+  color: var(--color);
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  transition: var(--darkModeTransition);
+}
+
+.submit-btn {
+  cursor: pointer;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  border: none;
+  padding: 0.1rem 0.5rem;
+  background: rgb(2, 177, 2);
+  color: white;
+}
+
+.submit-btn:hover {
+  background: rgb(0, 127, 0);
+  color: white;
+  transition: all linear 0.3s;
+}
+
+.image-container {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 2.5rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+img {
+  height: 20rem;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 998px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1198px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Apply text transformation to placeholder text */
+input::placeholder {
+  text-transform: uppercase; /* Change to 'lowercase', 'capitalize', or 'none' as needed */
+  /* Other styles can be applied as well */
+  color: #999; /* Change the color of the placeholder text */
+  font-style: italic; /* Add italics to the placeholder text */
+}
