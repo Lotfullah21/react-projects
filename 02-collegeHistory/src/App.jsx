@@ -1,24 +1,25 @@
 import { useState } from "react";
+import Colleges from "./components/Colleges";
 import universities from "./data/data";
-import College from "./components/Colleges";
-function App() {
-  const [colleges, setColleges] = useState(universities);
-  return (
-    <>
-      <section className="uni-container">
-        <h3 className="title">top {colleges.length} universities</h3>
-        <College colleges={colleges}></College>
-        <button
-          className="btn"
-          onClick={() => {
-            setColleges([]);
-          }}
-        >
-          Clear All
-        </button>
-      </section>
-    </>
-  );
-}
 
+const App = () => {
+	const [colleges, setUniversity] = useState(universities);
+	const removeColleges = () => {
+		setUniversity([]);
+	};
+	return (
+		<div className="section">
+			<h2 className="section-title">
+				Top {colleges.length} colleges in the world
+				<div className="underline"></div>
+			</h2>
+			<Colleges colleges={colleges}></Colleges>
+			<div className="btn-center">
+				<button className="btn btn-block" onClick={removeColleges}>
+					Clear all
+				</button>
+			</div>
+		</div>
+	);
+};
 export default App;

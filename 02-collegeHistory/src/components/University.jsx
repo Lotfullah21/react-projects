@@ -1,18 +1,12 @@
-const University = (props) => {
-  const { name, img, course, number } = props;
-
-  return (
-    <>
-      <article className="university">
-        <img src={img} alt={name} />
-        <div className="info">
-          <h1>{name}</h1>
-          <h4>{course}</h4>
-          <h5 className="rank">{`#${number}`}</h5>
-        </div>
-      </article>
-    </>
-  );
+const University = ({ img, course, id, name }) => {
+	return (
+		<article key={id} className="uni-container">
+			<img src={img} alt={name}></img>
+			<div className="info">
+				<h4>{name}</h4>
+				<h4>{course}</h4>
+			</div>
+		</article>
+	);
 };
-
-export { University };
+export default University;

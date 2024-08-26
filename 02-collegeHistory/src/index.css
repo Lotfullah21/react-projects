@@ -178,6 +178,7 @@ a {
 img {
 	width: 100%;
 	display: block;
+	background-size: cover;
 }
 
 @media screen and (min-width: 800px) {
@@ -243,6 +244,7 @@ h1 > span {
 .underline {
 	width: 5.5rem;
 	height: 0.2125rem;
+	margin-top: 1rem;
 	margin-bottom: 1.25rem;
 	background: var(--underline-secondary);
 	margin-left: auto;
@@ -265,11 +267,53 @@ h1 > span {
 .section-center {
 	width: 90vw;
 	margin: 0 auto;
+	padding: 2rem;
 	max-width: var(--max-width-nav);
 }
 
 @media screen and (min-width: 1192px) {
 	.section-center {
 		max-width: var(--max-width-nav);
+	}
+}
+
+/* Courses */
+
+.btn-center {
+	text-align: center;
+}
+
+.uni-container {
+	max-width: 28rem;
+	margin-bottom: 0.4rem;
+	text-align: center;
+}
+
+.uni-container img {
+	border: 4px;
+	box-shadow: var(--shadow-md);
+	margin-bottom: 1rem;
+	height: 15rem;
+}
+
+.uni-container h4 {
+	text-transform: capitalize;
+	color: var(--clr-primary-6);
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+	.uni-container {
+		display: grid;
+		/* Crucial to set 1fr for the contents we don't know its size to align with other contents.*/
+		grid-template-rows: auto 1fr;
+	}
+
+	.section-center {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1rem;
 	}
 }

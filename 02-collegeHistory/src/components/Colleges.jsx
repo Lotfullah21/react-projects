@@ -1,19 +1,13 @@
-import { University } from "./University";
-// remember the {} while getting the data from parent
-const College = ({ colleges }) => {
-  return (
-    <section>
-      {colleges.map((college, index) => {
-        return (
-          <University
-            key={college.id}
-            {...college}
-            number={index + 1}
-          ></University>
-        );
-      })}
-    </section>
-  );
-};
+import University from "./University.jsx";
 
-export default College;
+const Colleges = ({ colleges }) => {
+	console.log(colleges);
+	return (
+		<div className="section-center">
+			{colleges.map((college) => {
+				return <University {...college} key={college.id} />;
+			})}
+		</div>
+	);
+};
+export default Colleges;
