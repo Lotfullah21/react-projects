@@ -1,8 +1,23 @@
-# React + Vite
+## For Loading
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```css
+.section-center {
+	width: 90vw;
+	margin: 4rem auto;
+	max-width: var(--max-width-nav);
+}
+```
 
-Currently, two official plugins are available:
+`margin:4rem auto`, some margin for top and bottom can be added to avoid the loading being on top.
+It would also be better if loading and contents are at the same container.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Left side box shadow
+
+To have border box on the left side, add negative value.
+
+<figure>
+<img src="./src/data/demo.png" alt="grid default container" height="560px" width="920px" />
+<figcaption>Grid normal flow</figcaption>
+</figure>
+
+`css`

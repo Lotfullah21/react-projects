@@ -264,12 +264,110 @@ h1 > span {
 
 .section-center {
 	width: 90vw;
-	margin: 0 auto;
+	margin: 6rem auto;
 	max-width: var(--max-width-nav);
 }
 
 @media screen and (min-width: 1192px) {
 	.section-center {
-		max-width: var(--max-width-nav);
+		max-width: var(--max-width);
+	}
+}
+
+.btn-container {
+	margin: 1rem 0 4rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.job-btn {
+	text-transform: capitalize;
+	background-color: var(--clr-primary-5);
+	color: var(--clr-white);
+	padding: 0.385rem 0.6175rem;
+	display: inline-block;
+	transition: var(--transition);
+	letter-spacing: var(--spacing-wide);
+	cursor: pointer;
+	box-shadow: var(--shadow-lg);
+	border-radius: 5px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border: transparent;
+	box-shadow: var(--shadow-sm);
+}
+
+.job-btn:hover {
+	background: var(--clr-primary-6);
+	box-shadow: var(--shadow-md);
+}
+
+.active-btn:hover {
+	background: rgb(0, 172, 0);
+}
+
+.active-btn {
+	background: green;
+	color: white;
+}
+
+.job-title {
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: var(--clr-secondary-1);
+}
+
+.job-company {
+	display: inline-block;
+	text-transform: uppercase;
+	background: var(--clr-grey-4);
+	color: var(--clr-white);
+	padding: 0.4rem 0.6rem;
+	letter-spacing: var(--spacing-wide);
+	font-size: 1rem;
+	margin: 0.9rem 0 1.2rem 0;
+}
+
+.job-date {
+	color: var(--clr-grey-6);
+	letter-spacing: var(--spacing-wide);
+	font-size: 1.09rem;
+}
+
+.job-description {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 2rem;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.job-icon {
+	color: var(--clr-primary-3);
+	font-size: 1.1rem;
+}
+
+.job-info {
+	padding: 0.21rem;
+	letter-spacing: var(--spacing-wide);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	color: var(--clr-grey-5);
+}
+
+@media screen and (min-width: 868px) {
+	.section-center {
+		display: grid;
+		grid-template-columns: 190px 1fr;
+		gap: 2rem;
+	}
+
+	.btn-container {
+		flex-direction: column;
+		justify-content: flex-start;
 	}
 }
