@@ -3,45 +3,46 @@ import data from "./data/data";
 import persianData from "./data/PersianData";
 import { nanoid } from "nanoid";
 function App() {
-  const [count, setCount] = useState(0);
-  const [text, setText] = useState([]);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let paraAmount = parseInt(count);
-    let paragraph = data.slice(0, paraAmount);
-    setText(paragraph);
-  };
-  return (
-    <section className="section-center">
-      <h3>AI: Origins, Breakthroughs, and Impact</h3>
+	const [text, setText] = useState([]);
+	const [paraCount, setParaCount] = useState(1);
 
-      <form className="text-form" onSubmit={handleSubmit}>
-        <label htmlFor="amount">Paragraphs:</label>
-        <input
-          type="number"
-          min={1}
-          max={10}
-          step={1}
-          value={count}
-          onChange={(e) => setCount(e.target.value)}
-        ></input>
-        <button className="btn" type="submit">
-          generate
-        </button>
-      </form>
-      <article className="article">
-        {text.map((para, index) => {
-          const { content, title } = para;
-          return (
-            <div key={nanoid()}>
-              <h5>{title}</h5>
-              <p className="paragraph">{content}</p>
-            </div>
-          );
-        })}
-      </article>
-    </section>
-  );
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const paraAmount = parseInt(paraCount);
+		setText(data.slice(0, paraAmount));
+	};
+
+	return (
+		<section className="section-center">
+			<h1 className="section-title">Lets get some info about AI</h1>
+			<form onSubmit={handleSubmit} className="input-form">
+				<label htmlFor="inputVal" className="input-label">
+					Paragraph
+				</label>
+				<input
+					type="number"
+					min={0}
+					max={10}
+					id="inputVal"
+					placeholder="Enter number of paragraphs"
+					value={paraCount}
+					onChange={(e) => setParaCount(e.target.value)}
+					className="input-value"></input>
+				<button className="btn form-btn">Generate</button>
+			</form>
+
+			{text.map((textContent) => {
+				const { title, content } = textContent;
+				console.log(title);
+				console.log(nanoid());
+				return (
+					<article className="article" key={nanoid()}>
+						<h3 className="article-title">{title}</h3>
+						<p className="article-info">{content}</p>
+					</article>
+				);
+			})}
+		</section>
+	);
 }
-
 export default App;

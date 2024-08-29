@@ -61,6 +61,7 @@ Variables
 	--max-width: 1292px;
 	--underline-primary: rgb(14, 170, 241);
 	--underline-secondary: rgb(224, 49, 49);
+	--border-radius: 8px;
 }
 
 .dark-theme {
@@ -161,7 +162,6 @@ h4 {
 }
 
 p {
-	margin-bottom: 0.35rem;
 	color: var(--clr-grey-5);
 	font-size: 1rem;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -204,7 +204,6 @@ img {
 	h4 {
 		line-height: 1;
 		letter-spacing: var(--spacing-per);
-		margin-bottom: 0.75rem;
 	}
 }
 
@@ -264,7 +263,7 @@ h1 > span {
 
 .section-center {
 	width: 90vw;
-	margin: 0 auto;
+	margin: 5rem auto;
 	max-width: var(--max-width-nav);
 }
 
@@ -272,4 +271,59 @@ h1 > span {
 	.section-center {
 		max-width: var(--max-width-nav);
 	}
+}
+
+.section-title {
+	font-size: 2.5rem;
+	color: var(--clr-secondary-2);
+	letter-spacing: var(--spacing-wide);
+}
+
+.input-form {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin-bottom: 4rem;
+}
+
+.input-label {
+	font-size: 1.9rem;
+	align-self: center;
+	margin-right: 1rem;
+}
+.input-value {
+	width: 80vw;
+	max-width: 300px;
+	font-size: 1.4rem;
+	line-height: 2;
+	padding-left: 1rem;
+}
+
+.input-value::placeholder {
+	font-size: 1.2rem;
+}
+
+.btn:hover {
+	background: var(--clr-primary-6);
+}
+
+.form-btn {
+	padding: 0.2rem 0.6rem;
+	border-radius: 0;
+	display: inline-block;
+	border-top-right-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+}
+
+.article {
+	padding: 1rem;
+}
+
+.article p {
+	font-size: 1.1rem;
+	letter-spacing: var(--spacing-per);
+}
+
+.article-title {
+	color: var(--clr-primary-4);
 }
