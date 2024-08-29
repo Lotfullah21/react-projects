@@ -73,3 +73,26 @@ console.log(obj2); // Output: { a: 1, b: 2, c: 3 }
 ```
 
 ## How to align all items in a single line.
+
+```css
+@media screen and (min-width: 768px) {
+	.uni-container {
+		display: grid;
+		/* Crucial to set 1fr for the contents we don't know its size to align with other contents.*/
+		grid-template-rows: auto 1fr;
+	}
+}
+```
+
+Or just add
+
+```css
+@media screen and (min-width: 768px) {
+	.uni-container {
+		display: grid;
+		/* Crucial to set 1fr for the contents we don't know its size to align with other contents.*/
+		grid-template-rows: auto 1fr;
+		align-items: start;
+	}
+}
+```

@@ -273,3 +273,9 @@ h1 > span {
 		max-width: var(--max-width-nav);
 	}
 }
+
+.next-btn,
+.prev-btn {
+	font-size: 3.4rem;
+	color: var(--clr-primary-5);
+}

@@ -1,13 +1,27 @@
 import { useState } from "react";
 import data from "./data/data";
-import Questions from "./components/Questions";
-function App() {
-  const [questions, setQuestions] = useState(data);
-  return (
-    <main>
-      <Questions data={questions}></Questions>
-    </main>
-  );
-}
+import Questions from "./components/Alternative/Questions";
 
-export default App;
+const App2 = () => {
+	const [questions, setQuestions] = useState(data);
+	const [activeId, setActiveId] = useState(null);
+
+	const toggleQuestion = (id) => {
+		const newID = id === activeId ? "null" : id;
+		setActiveId(newID);
+	};
+
+	return (
+		<section className="section">
+			<div className="section-title">
+				<h2>FAQ</h2>
+				<div className="underline"></div>
+			</div>
+			<Questions
+				questions={questions}
+				activeId={activeId}
+				toggleQuestion={toggleQuestion}></Questions>
+		</section>
+	);
+};
+export default App2;
