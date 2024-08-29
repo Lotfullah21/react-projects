@@ -16,6 +16,6 @@ It would also be better if loading and contents are at the same container.
 To have border box on the left side, add negative value.
 
 <figure>
-<img src="./src/data/demo.png" alt="grid default container" height="460px" width="920px" />
+<img src="./src/data/demo.png" alt="grid default container" height="390px" width="920px" />
 <figcaption>Grid normal flow</figcaption>
 </figure>
