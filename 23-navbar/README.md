@@ -172,3 +172,13 @@ const linksStyle = {
 ```
 
 We use this to control the height of the container, the links will alway have their own height.
+
+```css
+.links-container {
+	height: auto !important;
+}
+```
+
+height: auto;: This sets the height of the .links-container element to automatically adjust based on the content inside it. The height will expand or contract to fit the content.
+
+!important: The !important flag is used to override any other conflicting CSS rules for the height property of the .links-container element. Even if there are other CSS rules setting the height for this element elsewhere in the stylesheet, this rule will take precedence because of the !important flag.
