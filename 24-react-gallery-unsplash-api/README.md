@@ -85,10 +85,6 @@ useEffect(() => {
 
 Check the user preference, if it is dark mode, toggle the theme and whenever the `isDarkTheme` changes, re-render the page.
 
-## 3. Unsplash API
-
-`-WIgrMRaR6k31S6KPXPhtR-4YXZIULISQXjvmRCkjXo`
-
 ## 4. React Query
 
 React query is a library that is used to handle API requests in our applications.
