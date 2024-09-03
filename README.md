@@ -100,3 +100,14 @@ npm run dev
 
 - One of the major difference is that all the files with `.js` extension will be converted to `.jsx` extension.
 - `index.html` sits in the root instead of the `public folder`.
+
+
+Usually, for bigger projects thses are the go packages to install.
+```sh
+npm install redux react-redux @reduxjs/toolkit
+npm install react-icons
+npm install react-toastify
+npm install @tanstack/react-query
+npm install axios
+npm install react-router-dom
+```
